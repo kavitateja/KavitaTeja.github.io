@@ -355,6 +355,77 @@
             margin-bottom: 5px;
         }
 
+        /* Experience & Training Styling */
+        .exp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        .exp-column h3 {
+            font-size: 1.5em;
+            color: #00f6ff;
+            margin-bottom: 25px;
+            border-bottom: 2px solid rgba(0, 246, 255, 0.2);
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .exp-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .exp-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .exp-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .exp-link .exp-card:hover {
+            background: rgba(0, 246, 255, 0.06);
+            border-color: #00f6ff;
+            transform: translateY(-4px);
+            box-shadow: 0 5px 15px rgba(0, 246, 255, 0.15);
+        }
+        .exp-card h4 {
+            font-size: 1.2em;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        .exp-card p {
+            color: #cbd5e1;
+            font-size: 0.95em;
+        }
+        .exp-card .badge {
+            display: inline-block;
+            background: rgba(0, 246, 255, 0.2);
+            color: #00f6ff;
+            font-size: 0.75em;
+            padding: 3px 10px;
+            border-radius: 20px;
+            margin-top: 8px;
+            font-weight: 600;
+            border: 1px solid rgba(0, 246, 255, 0.3);
+        }
+        .exp-card .active-badge {
+            background: rgba(57, 255, 20, 0.15);
+            color: #39ff14;
+            border-color: rgba(57, 255, 20, 0.3);
+            animation: pulseGlow 2s infinite alternate;
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 5px rgba(57, 255, 20, 0.2); }
+            100% { box-shadow: 0 0 15px rgba(57, 255, 20, 0.5); }
+        }
+
         /* Training & Workshops Gallery Styling */
         .gallery-container {
             display: grid;
@@ -410,6 +481,7 @@
             nav { flex-direction: column; padding: 15px; gap: 15px; }
             nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
             .header-buttons { justify-content: center; }
+            .exp-grid { grid-template-columns: 1fr; gap: 40px; }
         }
 
         @media (max-width: 600px) {
@@ -446,6 +518,7 @@
             <li><a href="#journey">My Journey</a></li>
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#training">Training</a></li>
         </ul>
     </nav>
@@ -522,7 +595,6 @@
         </div>
     </section>
 
-    <!-- CERTIFICATIONS SECTION -->
     <section id="certifications">
         <h2 class="section-title">My <span>Certifications</span></h2>
         <div class="glass-card cert-container">
@@ -555,7 +627,6 @@
         </div>
     </section>
 
-    <!-- EXPERTISE SECTION -->
     <section id="expertise">
         <h2 class="section-title">My <span>Expertise</span></h2>
         <div class="glass-card">
@@ -625,7 +696,69 @@
         </div>
     </section>
 
-    <!-- TRAINING & WORKSHOPS SECTION -->
+    <section id="experience">
+        <h2 class="section-title">Training & <span>Experience</span></h2>
+        <div class="glass-card">
+            <div class="exp-grid">
+                
+                <div class="exp-column">
+                    <h3>🎓 Professional Training</h3>
+                    <div class="exp-list">
+                        
+                        <a href="https://aphealthcare.in/" target="_blank" class="exp-link" title="Click to visit website">
+                            <div class="exp-card">
+                                <h4>✨ SPMU Training</h4>
+                                <p>AP Hospital (Petalsaesthetics), Patiala</p>
+                                <span class="badge">🔗 Click to View Academy</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://orane.com/coco-center/top-beauty-courses-in-chandigarh/?utm_source=Google+Ads&utm_medium=clickbeautyAds&utm_campaign=Chandigarh&gad_source=1&gad_campaignid=22946873482&gbraid=0AAAAA_KYORoA0tkG4OR5paa1QMesCEK0Q&gclid=CjwKCAjw9szSBhBNEiwAC57Sq3xAKbmeOtPK6FCBgTmMOpE2LEI5460l1RHZtIBtMbcdh1GxLA8vKBoC6oQQAvD_BwE" target="_blank" class="exp-link" title="Click to visit website">
+                            <div class="exp-card">
+                                <h4>🌸 Cosmetology Course</h4>
+                                <p>Orane International Academy</p>
+                                <span class="badge">🔗 Click to View Academy</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.google.com/search?q=rajinder+nail+art+school&sca_esv=3411e0dcc18d8ddc&sxsrf=APpeQntUYsN0awvghkIM0ejPbXOO9fKOtg%3A1783857976286&ei=OINTaveBEdeb4-EPmtS8oQE&biw=2048&bih=996&ved=0ahUKEwj3_YXojM2VAxXXzTgGHRoqLxQQ4dUDCBA&uact=5&oq=rajinder+nail+art+school&gs_lp=Egxnd3Mtd2l6LXNlcnAiGHJhamluZGVyIG5haWwgYXJ0IHNjaG9vbDIGEAAYFhgeMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgMyCxAAGIAEGIoFGIYDMgUQABjvBTIFEAAY7wUyBRAAGO8FMgUQABjvBUjTkQFQAFiijwFwB3gAkAEAmAHRAaABjyiqAQYwLjMwLjG4AQPIAQD4AQGYAiagAtQqwgIEECMYJ8ICCxAAGIAEGIoFGJECwgIREC4YgAQYigUYkQIYxwEYrwHCAgUQABiABMICDhAuGIAEGIoFGI0GGLEDwgIKEAAYgAQYigUYQ8ICEBAuGIAEGIoFGEMYxwEYrwHCAgsQABiABBixAxiDAcICIBAuGIAEGIoFGJECGMcBGK8BGJcFGNwEGN4EGOAE2AEBwgILEC4YgAQYigUYkQLCAg0QLhiABBiKBRhDGLEDwgIQEC4YgAQYFBiHAhjHARivAcICERAuGK8BGMcBGJECGIAEGIoFwgIKEAAYgAQYFBiHAsICCBAuGIAEGLEDwgIFEC4YgATCAgsQLhivARjHARiABMICCBAAGIAEGLEDwgIfEC4YgAQYFBiHAhjHARivARiXBRjcBBjeBBjgBNgBAcICCxAuGJECGIAEGIoFwgIHEC4YgAQYCsICChAuGIAEGBQYhwLCAhQQLhiABBiKBRiRAhjHARivARiOBcICCxAuGIAEGMcBGK8BwgIZEC4YgAQYFBiHAhiXBRjcBBjeBBjfBNgBAcICFBAuGIAEGJcFGNwEGN4EGOAE2AEBwgIIEAAYFhgeGArCAgUQIRifBcICBRAhGKABwgIIEAAYCBgeGA2YAwC6BgYIARABGBSSBwY3LjI4LjOgB_uPBLIHBjAuMjguM7gHoyrCBwkwLjEuMjKuMTHIB_4BgAgB&sclient=gws-wiz-serp" target="_blank" class="exp-link" title="Click to visit school info">
+                            <div class="exp-card">
+                                <h4>💅 Nails Training</h4>
+                                <p>RNAS Academy (Rajinder Nail Art School)</p>
+                                <span class="badge">🔗 Click to View Academy</span>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <div class="exp-column">
+                    <h3>💼 Work Experience</h3>
+                    <div class="exp-list">
+                        
+                        <div class="exp-card">
+                            <h4>👄 SPMU Specialist</h4>
+                            <p>AP Hospital (Petalsaesthetics), Patiala</p>
+                        </div>
+                        
+                        <div class="exp-card">
+                            <h4>👩‍🏫 Nail Trainer</h4>
+                            <p>NIIB Kharar, Mohali</p>
+                        </div>
+                        
+                        <div class="exp-card">
+                            <h4>👑 Senior Educator / Trainer</h4>
+                            <p>Headmasters Academy, Chandigarh</p>
+                            <span class="badge active-badge">⚡ Currently Working</span>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
     <section id="training">
         <h2 class="section-title">Training & <span>Workshops</span></h2>
         <div class="glass-card">
