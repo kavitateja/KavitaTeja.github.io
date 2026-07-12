@@ -318,9 +318,6 @@
             transform: translateX(10px);
             box-shadow: 0 4px 15px rgba(0, 246, 255, 0.2);
         }
-        .cert-icon {
-            font-size: 1.5em;
-        }
 
         /* Expertise Styling */
         .expertise-container {
@@ -349,10 +346,6 @@
             transform: translateY(-8px);
             box-shadow: 0 10px 25px rgba(0, 246, 255, 0.15);
             border-color: #00f6ff;
-        }
-        .expertise-icon {
-            font-size: 2.5em;
-            margin-bottom: 5px;
         }
 
         /* Experience & Training Styling */
@@ -424,6 +417,36 @@
         @keyframes pulseGlow {
             0% { box-shadow: 0 0 5px rgba(57, 255, 20, 0.2); }
             100% { box-shadow: 0 0 15px rgba(57, 255, 20, 0.5); }
+        }
+
+        /* Education Layout Styling */
+        .edu-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .edu-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 25px 20px;
+            border-radius: 12px;
+            border-left: 4px solid #00f6ff;
+            transition: all 0.3s ease;
+        }
+        .edu-card:hover {
+            background: rgba(0, 246, 255, 0.06);
+            border-color: #00f6ff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 246, 255, 0.15);
+        }
+        .edu-card h4 {
+            font-size: 1.25em;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        .edu-card p {
+            color: #cbd5e1;
+            font-size: 1em;
         }
 
         /* Training & Workshops Gallery Styling */
@@ -502,8 +525,8 @@
             .cert-item { font-size: 1em; padding: 15px; }
             .expertise-container { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
             .expertise-item { padding: 20px 10px; font-size: 1em; }
-            .expertise-icon { font-size: 2em; }
             .gallery-container { grid-template-columns: 1fr; }
+            .edu-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -519,6 +542,7 @@
             <li><a href="#certifications">Certifications</a></li>
             <li><a href="#expertise">Expertise</a></li>
             <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#training">Training</a></li>
         </ul>
     </nav>
@@ -526,7 +550,7 @@
     <section id="home">
         <div class="hero-content">
             <h1>Kavita Teja</h1>
-            <h2><span>✨ Certified Nail & SPMU Educator</span></h2>
+            <h2><span>Certified Nail & SPMU Educator</span></h2>
             
             <div class="hero-text-box">
                 <p class="highlight-text" style="color: #00f6ff; font-weight: 600;">Beauty Trainer | Nail Artist | SPMU Specialist</p>
@@ -536,7 +560,7 @@
             
             <div class="header-buttons" style="margin-top: 30px;">
                 <a href="#certifications" class="btn btn-outline">
-                    🏆 Certified Educator
+                    Certified Educator
                 </a>
             </div>
         </div>
@@ -568,27 +592,27 @@
         <div class="glass-card intro-text">
             
             <div class="journey-block">
-                <h3>💅 Started as a Nail Artist</h3>
+                <h3>Started as a Nail Artist</h3>
                 <p>My journey began with a passion for creativity and beauty. I started as a Nail Artist, dedicating myself to mastering modern nail techniques and delivering high-quality services.</p>
             </div>
 
             <div class="journey-block">
-                <h3>🎓 Earned Professional Certifications</h3>
+                <h3>Earned Professional Certifications</h3>
                 <p>Driven by continuous learning, I completed professional certifications in Nail Technology and Semi-Permanent Makeup (SPMU), strengthening my expertise and staying aligned with the latest industry standards.</p>
             </div>
 
             <div class="journey-block">
-                <h3>👩‍🏫 Became a Certified Educator</h3>
+                <h3>Became a Certified Educator</h3>
                 <p>As my experience grew, I became a Certified Nail & SPMU Educator, committed to sharing my knowledge and helping aspiring beauty professionals build successful careers.</p>
             </div>
 
             <div class="journey-block">
-                <h3>🌟 Trained Future Beauty Professionals</h3>
+                <h3>Trained Future Beauty Professionals</h3>
                 <p>Through hands-on training, practical demonstrations, and personalized mentorship, I have guided students in developing the confidence, technical skills, and creativity needed to excel in the beauty industry.</p>
             </div>
 
             <div class="journey-block">
-                <h3>📚 Continuing Professional Development</h3>
+                <h3>Continuing Professional Development</h3>
                 <p>Learning never stops. I continuously enhance my skills by attending advanced workshops, exploring new techniques, and staying updated with the latest beauty trends to provide the highest standard of education and training.</p>
             </div>
 
@@ -600,27 +624,22 @@
         <div class="glass-card cert-container">
             
             <div class="cert-item">
-                <span class="cert-icon">🥇</span> 
                 Certified Nail Educator
             </div>
 
             <div class="cert-item">
-                <span class="cert-icon">🏆</span> 
                 Certified SPMU Educator
             </div>
 
             <div class="cert-item">
-                <span class="cert-icon">📜</span> 
                 Advanced Nail Art Certification
             </div>
 
             <div class="cert-item">
-                <span class="cert-icon">🎖️</span> 
                 PMU Certification
             </div>
 
             <div class="cert-item">
-                <span class="cert-icon">🎓</span> 
                 Beauty Workshops & Masterclasses
             </div>
 
@@ -633,62 +652,50 @@
             <div class="expertise-container">
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">💅</span>
                     Nail Extensions
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">🎨</span>
                     Nail Art
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">✨</span>
                     Gel Polish
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">💎</span>
                     Acrylic Nails
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">👑</span>
                     Russian Manicure
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">🌸</span>
                     BIAB Nails
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">👄</span>
                     Lip Blush
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">👁</span>
                     Ombre Brows
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">✍️</span>
                     Microblading
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">💄</span>
                     Permanent Makeup (SPMU)
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">👁️</span>
                     Lash Lift
                 </div>
                 
                 <div class="expertise-item">
-                    <span class="expertise-icon">🌿</span>
                     Brow Lamination
                 </div>
 
@@ -702,30 +709,30 @@
             <div class="exp-grid">
                 
                 <div class="exp-column">
-                    <h3>🎓 Professional Training</h3>
+                    <h3>Professional Training</h3>
                     <div class="exp-list">
                         
                         <a href="https://aphealthcare.in/" target="_blank" class="exp-link" title="Click to visit website">
                             <div class="exp-card">
-                                <h4>✨ SPMU Training</h4>
+                                <h4>SPMU Training</h4>
                                 <p>AP Hospital (Petalsaesthetics), Patiala</p>
-                                <span class="badge">🔗 Click to View Academy</span>
+                                <span class="badge">Click to View Academy</span>
                             </div>
                         </a>
                         
                         <a href="https://orane.com/coco-center/top-beauty-courses-in-chandigarh/?utm_source=Google+Ads&utm_medium=clickbeautyAds&utm_campaign=Chandigarh&gad_source=1&gad_campaignid=22946873482&gbraid=0AAAAA_KYORoA0tkG4OR5paa1QMesCEK0Q&gclid=CjwKCAjw9szSBhBNEiwAC57Sq3xAKbmeOtPK6FCBgTmMOpE2LEI5460l1RHZtIBtMbcdh1GxLA8vKBoC6oQQAvD_BwE" target="_blank" class="exp-link" title="Click to visit website">
                             <div class="exp-card">
-                                <h4>🌸 Cosmetology Course</h4>
+                                <h4>Cosmetology Course</h4>
                                 <p>Orane International Academy</p>
-                                <span class="badge">🔗 Click to View Academy</span>
+                                <span class="badge">Click to View Academy</span>
                             </div>
                         </a>
                         
                         <a href="https://www.google.com/search?q=rajinder+nail+art+school&sca_esv=3411e0dcc18d8ddc&sxsrf=APpeQntUYsN0awvghkIM0ejPbXOO9fKOtg%3A1783857976286&ei=OINTaveBEdeb4-EPmtS8oQE&biw=2048&bih=996&ved=0ahUKEwj3_YXojM2VAxXXzTgGHRoqLxQQ4dUDCBA&uact=5&oq=rajinder+nail+art+school&gs_lp=Egxnd3Mtd2l6LXNlcnAiGHJhamluZGVyIG5haWwgYXJ0IHNjaG9vbDIGEAAYFhgeMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgMyCxAAGIAEGIoFGIYDMgUQABjvBTIFEAAY7wUyBRAAGO8FMgUQABjvBUjTkQFQAFiijwFwB3gAkAEAmAHRAaABjyiqAQYwLjMwLjG4AQPIAQD4AQGYAiagAtQqwgIEECMYJ8ICCxAAGIAEGIoFGJECwgIREC4YgAQYigUYkQIYxwEYrwHCAgUQABiABMICDhAuGIAEGIoFGI0GGLEDwgIKEAAYgAQYigUYQ8ICEBAuGIAEGIoFGEMYxwEYrwHCAgsQABiABBixAxiDAcICIBAuGIAEGIoFGJECGMcBGK8BGJcFGNwEGN4EGOAE2AEBwgILEC4YgAQYigUYkQLCAg0QLhiABBiKBRhDGLEDwgIQEC4YgAQYFBiHAhjHARivAcICERAuGK8BGMcBGJECGIAEGIoFwgIKEAAYgAQYFBiHAsICCBAuGIAEGLEDwgIFEC4YgATCAgsQLhivARjHARiABMICCBAAGIAEGLEDwgIfEC4YgAQYFBiHAhjHARivARiXBRjcBBjeBBjgBNgBAcICCxAuGJECGIAEGIoFwgIHEC4YgAQYCsICChAuGIAEGBQYhwLCAhQQLhiABBiKBRiRAhjHARivARiOBcICCxAuGIAEGMcBGK8BwgIZEC4YgAQYFBiHAhiXBRjcBBjeBBjfBNgBAcICFBAuGIAEGJcFGNwEGN4EGOAE2AEBwgIIEAAYFhgeGArCAgUQIRifBcICBRAhGKABwgIIEAAYCBgeGA2YAwC6BgYIARABGBSSBwY3LjI4LjOgB_uPBLIHBjAuMjguM7gHoyrCBwkwLjEuMjKuMTHIB_4BgAgB&sclient=gws-wiz-serp" target="_blank" class="exp-link" title="Click to visit school info">
                             <div class="exp-card">
-                                <h4>💅 Nails Training</h4>
+                                <h4>Nails Training</h4>
                                 <p>RNAS Academy (Rajinder Nail Art School)</p>
-                                <span class="badge">🔗 Click to View Academy</span>
+                                <span class="badge">Click to View Academy</span>
                             </div>
                         </a>
                         
@@ -733,28 +740,57 @@
                 </div>
                 
                 <div class="exp-column">
-                    <h3>💼 Work Experience</h3>
+                    <h3>Work Experience</h3>
                     <div class="exp-list">
                         
                         <div class="exp-card">
-                            <h4>👄 SPMU Specialist</h4>
+                            <h4>Lip Blush / Eyebrows SPMU Specialist</h4>
                             <p>AP Hospital (Petalsaesthetics), Patiala</p>
                         </div>
                         
                         <div class="exp-card">
-                            <h4>👩‍🏫 Nail Trainer</h4>
+                            <h4>Nail Trainer</h4>
                             <p>NIIB Kharar, Mohali</p>
                         </div>
                         
                         <div class="exp-card">
-                            <h4>👑 Senior Educator / Trainer</h4>
+                            <h4>Senior Educator / Trainer</h4>
                             <p>Headmasters Academy, Chandigarh</p>
-                            <span class="badge active-badge">⚡ Currently Working</span>
+                            <span class="badge active-badge">Currently Working</span>
                         </div>
                         
                     </div>
                 </div>
                 
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">My <span>Education</span></h2>
+        <div class="glass-card">
+            <div class="edu-container">
+                
+                <div class="edu-card">
+                    <h4>10th Standard</h4>
+                    <p>CBSE Board</p>
+                </div>
+                
+                <div class="edu-card">
+                    <h4>12th Standard</h4>
+                    <p>CBSE Board</p>
+                </div>
+                
+                <div class="edu-card">
+                    <h4>Bachelor of Arts (BA)</h4>
+                    <p>NEHU University</p>
+                </div>
+                
+                <div class="edu-card">
+                    <h4>Master In Cosmetology (MIC)</h4>
+                    <p>Orane International Academy</p>
+                </div>
+
             </div>
         </div>
     </section>
